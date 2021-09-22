@@ -1,0 +1,120 @@
+footer{
+	background-color: #1c242a;
+	padding: 45px 0 50px 0;
+	@media (max-width: $md1+px){
+		padding: 20px 0 30px 0;
+	}
+}
+//====================================================================================================
+.footer {
+	&__row {
+		@include flexbox();
+		@media (max-width: 650px){
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	&__column {
+		&:first-child{
+			min-width: 185px;
+			@media (max-width: $md1+px){
+				@include flexbox();
+				flex-direction: column;
+				justify-content: center;
+			}
+		}
+		&:nth-child(2){
+			flex: 1 1 auto;
+			@include flexbox();
+			align-items: flex-start;
+		}
+		&:last-child{
+			@include flexbox();
+			flex-direction: column;
+			align-items: flex-end;
+			justify-content: flex-end;
+			min-width: 225px;
+			@media (max-width: $md1+px){
+				justify-content: center;
+			}
+			@media (max-width: 650px){
+				align-items: center;
+			}
+		}
+	}
+	&__logo {
+		@include flexbox();
+		align-items: flex-end;
+		img {
+			&:first-child{
+				height: 42px;
+				transform: scale(-1, 1);
+			}
+			&:last-child{
+				height: 35px;
+			}
+		}
+	}
+	&__text {
+		margin: 25px 0px 0px 0px;
+		font-size: 14px;
+		line-height: 14px;
+		color: #bb9c66;
+	}
+	&__nav {
+		max-width: 520px;
+		margin: 0px 0px 0px 15px;
+		@media (max-width: 650px){
+			margin: 10px 0px 20px 0px;
+		}
+	}
+	&__list {
+		@include flexbox();
+		flex-wrap: wrap;
+		@media (max-width: $md1+px){
+			justify-content: center;
+		}
+	}
+	&__link {
+		display: inline-block;
+		margin: 14px 8px 0px 8px;
+		font-family: 'PFDinTextCondPro';
+		font-size: 14px;
+		line-height: 14px;
+		font-weight: 500;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		color: #ffffff;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	&__tel {
+		font-family: 'BravoRG';
+		line-height: 45px;
+		text-transform: uppercase;
+		color: #bb9c66;
+		font-size: 50px;
+		span {
+			vertical-align: top;
+			font-size: 25px;
+			line-height: 25px;
+			padding: 0px 0px 0px 0px;
+		}
+	}
+	&__callback {
+		margin: 7px 0px 3px 0px;
+		padding: 0px 0px 0px 13px;
+		background: url('../img/footer/icons/callback.svg') left center no-repeat;
+		font-size: 14px;
+		line-height: 14px;
+		color: #bb9c66;
+		span {
+			border-bottom: 1px dashed #bb9c66;
+			&:hover {
+				border-bottom: none;
+			}
+		}
+	}
+}
+//====================================================================================================
